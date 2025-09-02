@@ -1,0 +1,10 @@
+version: '1.0'
+services:
+  work-time-tracker:
+    build: .
+    ports:
+      - "1234:80"  # Change 3000 to your desired port
+    restart: unless-stopped
+    container_name: work-time-tracker
+    environment:
+      - NODE_ENV=production
